@@ -1,0 +1,39 @@
+@import "../styles.scss";
+
+.pad-frame {
+  box-sizing: border-box;
+  // height: 100%;
+  flex-shrink: 0;
+  max-width: 551px;
+  overflow: visible;
+  background-color: $blond;
+  border: 1px solid #bababa;
+  padding: 20px 20px;
+}
+
+.pad-header {
+  width: 100%;
+  overflow: hidden;
+  color: $charlestonGreen;
+  font-size: 56px;
+  letter-spacing: 0px;
+  line-height: 1.2;
+  text-align: center
+}
+
+.pad-top-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.pad-scroll {
+  width: auto;
+  height: 522px;
+  overflow: hidden;
+  margin-top: 20px;
+  margin: 20px 10px;
+}
+
+@import "../pad/inputs/button";
+@import "./field";
+@import "./inputs/line";

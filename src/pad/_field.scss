@@ -1,0 +1,14 @@
+.pad-field {
+  overflow-y: auto;
+  box-sizing: border-box;
+  overflow: hidden;
+  background-color: #ffffff;
+  // border: 1px solid #222222;
+}
+
+.pad-add-line-button {
+  width: 100%;
+  border-width: 0 0 1px 0;
+  height: 44px;
+  padding: 5px 10px;
+}
