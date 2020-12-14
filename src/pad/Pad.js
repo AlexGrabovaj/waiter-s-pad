@@ -13,14 +13,6 @@ class Pad extends React.Component {
             <div className="pad-header"> Waiter's Pad </div>
           </Col>
         </Row>
-        <Row className="pad-top-buttons">
-          <Col xs="6">
-            <PadButton>Options</PadButton>
-          </Col>
-          <Col xs="6">
-            <PadButton>Save</PadButton>
-          </Col>
-        </Row>
         <Row>
           <Col xs="12">
             <PadField />

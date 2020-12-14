@@ -1,6 +1,24 @@
 .pad-line {
     width: 100%;
     border-width: 0 0 1px 0;
-    height: 44px;
+    height: 55px;
     padding: 5px 10px;
+    border-bottom: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .pad-line-input {
+    width: 100%;
+    border-width: 0;
+  }
+
+  .pad-line-delete {
+    &:hover {
+      opacity: 0.6;
+    }
+
+    padding: 14px 0;
+    width: 50px;
+    cursor: pointer;
   }
