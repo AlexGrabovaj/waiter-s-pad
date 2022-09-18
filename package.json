@@ -4,6 +4,8 @@
   "description": "",
   "keywords": [],
   "main": "src/index.js",
+  "author": "Aleksander Grabovaj",
+  "license": "MIT",
   "dependencies": {
     "bootstrap": "4.5.3",
     "font-awesome": "^4.7.0",
