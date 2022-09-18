@@ -6,6 +6,7 @@
   "main": "src/index.js",
   "author": "Aleksander Grabovaj",
   "license": "MIT",
+  "homepage": "https://alexgrabovaj.github.io/waiter-s-pad/",
   "dependencies": {
     "bootstrap": "4.5.3",
     "font-awesome": "^4.7.0",
@@ -19,11 +20,14 @@
   },
   "devDependencies": {
     "@babel/plugin-proposal-class-properties": "^7.12.1",
+    "gh-pages": "^4.0.0",
     "typescript": "3.8.3"
   },
   "scripts": {
     "start": "react-scripts start --no-cache",
     "build": "react-scripts build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "test": "react-scripts test --env=jsdom --no-cache",
     "eject": "react-scripts eject"
   },
