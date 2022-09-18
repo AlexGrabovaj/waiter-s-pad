@@ -1,6 +1,4 @@
-import React, { Component } from "react";
-import { Button, Form, Input } from "reactstrap";
-import { isLineBreak } from "typescript";
+import React from "react";
 
 function PadLine({type='', className = '', line, ...rest}) {
   const props = {

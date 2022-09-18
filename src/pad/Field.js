@@ -1,10 +1,20 @@
 import React, { Component } from "react";
-import { Button, Form, Input } from "reactstrap";
+import { Form } from "reactstrap";
 import PadLine from "./inputs/Line";
 import PadButton from "./inputs/Button";
+import { Parser } from "json2csv";
+
+
+const downloadAsCsv = (data) => { //TODO get this out of here
+  const encodedUri = encodeURI(data);
+  var link = document.createElement("a");
+  link.setAttribute("href", encodedUri);
+  link.setAttribute("download", `idea_${Date.now()}.csv`);
+  link.click();
+}
 
 function Lines({ lines = [] , removeLine = ()=>{}, onUpdateLine = ()=>{}}) {
-  var lines = Object.keys(lines).map((key, index ) => {
+  return Object.keys(lines).map((key, index ) => {
     var line = lines[key];
     return <PadLine key={line.key} 
       id={`line_`+line.key}
@@ -14,7 +24,6 @@ function Lines({ lines = [] , removeLine = ()=>{}, onUpdateLine = ()=>{}}) {
       count={index+1}
       />;
   });
-  return lines;
 }
 
 class PadField extends Component {
@@ -27,16 +36,15 @@ class PadField extends Component {
       },
     },
   };
-  handleSubmit = (e) => {
-    e.preventDefault();
-    let savedFile = "data:text/csv;charset=utf-8," 
-    + Object.values(this.state.lines).map(line => line.value).join("\n");
-    let encodedUri = encodeURI(savedFile);
-    let link = <a href={encodedUri} download={`title.svg`}></a>;
-    // React.render(link, document.body)
-    // link.click();
-    // window.open(encodedUri);
-    console.log(this.state.lines);
+  savePad = (e) => {
+    const fields = ["key", "value"]
+    const parserOpt = {fields}
+    const parser = new Parser(parserOpt) 
+    const ideas = Object.values(this.state.lines)
+    const parsedIdeas = parser.parse(ideas)
+    
+    const savedFile = `data:text/csv;charset=utf-8,${parsedIdeas}`; 
+    downloadAsCsv(savedFile)
   };
 
   addLine = (e) => {
@@ -79,12 +87,26 @@ class PadField extends Component {
       }
   };
 
+  clear = () => {
+    this.setState({
+      ...this.state,
+      lineCounter: 0,
+      lines: {
+        0:{
+          key: 0,
+          value: ''
+        },
+      },
+    })
+  }
+
   render() {
     return (
       <Form onSubmit={this.handleSubmit}>
         <div className="pad-top-buttons">
-          <PadButton> Options </PadButton>
-          <PadButton type="submit"> Save </PadButton>
+          {/* <PadButton> Options </PadButton> */}
+          <PadButton onClick={this.clear}> Clear </PadButton>
+          <PadButton onClick={this.savePad}> Save </PadButton>
         </div>
         <div className="pad-scroll">
           <div className="pad-field">

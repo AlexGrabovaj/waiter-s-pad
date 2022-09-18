@@ -1,6 +1,5 @@
 import React from "react";
 import "./pad.scss";
-import PadButton from "./inputs/Button";
 import PadField from "./Field.js";
 import { Col, Container, Row } from "reactstrap";
 
