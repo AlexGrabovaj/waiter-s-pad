@@ -37,6 +37,7 @@ class PadField extends Component {
     },
   };
   savePad = (e) => {
+    e.preventDefault()
     const fields = ["key", "value"]
     const parserOpt = {fields}
     const parser = new Parser(parserOpt) 
@@ -45,6 +46,7 @@ class PadField extends Component {
     
     const savedFile = `data:text/csv;charset=utf-8,${parsedIdeas}`; 
     downloadAsCsv(savedFile)
+    this.clear()
   };
 
   addLine = (e) => {
@@ -102,7 +104,7 @@ class PadField extends Component {
 
   render() {
     return (
-      <Form onSubmit={this.handleSubmit}>
+      <Form onSubmit={this.savePad}>
         <div className="pad-top-buttons">
           {/* <PadButton> Options </PadButton> */}
           <PadButton onClick={this.clear}> Clear </PadButton>
