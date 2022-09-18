@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/waiter-s-pad/static/css/main.a3854d60.chunk.css",
+    "main.js": "/waiter-s-pad/static/js/main.2849e86e.chunk.js",
+    "main.js.map": "/waiter-s-pad/static/js/main.2849e86e.chunk.js.map",
+    "runtime-main.js": "/waiter-s-pad/static/js/runtime-main.9a8cbc3d.js",
+    "runtime-main.js.map": "/waiter-s-pad/static/js/runtime-main.9a8cbc3d.js.map",
+    "static/css/2.0f7872f5.chunk.css": "/waiter-s-pad/static/css/2.0f7872f5.chunk.css",
+    "static/js/2.5fe7cc17.chunk.js": "/waiter-s-pad/static/js/2.5fe7cc17.chunk.js",
+    "static/js/2.5fe7cc17.chunk.js.map": "/waiter-s-pad/static/js/2.5fe7cc17.chunk.js.map",
+    "index.html": "/waiter-s-pad/index.html",
+    "precache-manifest.1a2adb97b7d03ff091cb81f7c1ddccef.js": "/waiter-s-pad/precache-manifest.1a2adb97b7d03ff091cb81f7c1ddccef.js",
+    "service-worker.js": "/waiter-s-pad/service-worker.js",
+    "static/css/2.0f7872f5.chunk.css.map": "/waiter-s-pad/static/css/2.0f7872f5.chunk.css.map",
+    "static/css/main.a3854d60.chunk.css.map": "/waiter-s-pad/static/css/main.a3854d60.chunk.css.map",
+    "static/js/2.5fe7cc17.chunk.js.LICENSE.txt": "/waiter-s-pad/static/js/2.5fe7cc17.chunk.js.LICENSE.txt",
+    "static/media/font-awesome.min.css": "/waiter-s-pad/static/media/fontawesome-webfont.fee66e71.woff"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9a8cbc3d.js",
+    "static/css/2.0f7872f5.chunk.css",
+    "static/js/2.5fe7cc17.chunk.js",
+    "static/css/main.a3854d60.chunk.css",
+    "static/js/main.2849e86e.chunk.js"
+  ]
+}
