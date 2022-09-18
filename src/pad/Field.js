@@ -38,6 +38,9 @@ class PadField extends Component {
   };
   savePad = (e) => {
     e.preventDefault()
+    if (this.state.lineCounter === 0) {
+      return
+    }
     const fields = ["key", "value"]
     const parserOpt = {fields}
     const parser = new Parser(parserOpt) 
